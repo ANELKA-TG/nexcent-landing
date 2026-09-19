@@ -108,6 +108,7 @@ ul {
   background-color: var(--color-primary-dark);
 }
 
+/* the screen was flopping on small screens so i added it , but it is not visible on large screens*/
 .hamburger {
   display: none;
   flex-direction: column;
