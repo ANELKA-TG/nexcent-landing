@@ -24,14 +24,8 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--color-text-dark);
-  overflow-x: hidden;
-}
-
-.container {
-  max-width: 1500px;
-  margin: 0 auto;
 }
 
 ul {
@@ -40,7 +34,7 @@ ul {
 
 .navbar {
   background-color: var(--color-bg-light);
-  padding: 20px 0;
+  padding: 20px ;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -129,6 +123,12 @@ ul {
   border-radius: 2px;
 }
 
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .hero {
   background-color: var(--color-bg-light);
   padding: 80px 5px; 
@@ -136,7 +136,8 @@ ul {
 
 .hero-inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 100px;
 }
 
 .hero-content {
@@ -240,9 +241,8 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 100px;
-  margin-top: 40px;
   flex-wrap: wrap;
-  padding: 0 20px;
+  padding: 20px;
 }
 .learn-more-content{
   width: 500px;
@@ -337,7 +337,7 @@ ul {
 }
 
 .testimonial-quote {
-  font-size: 16px;
+  font-size: 20px;
   color: var(--color-text-gray);
   margin-bottom: 24px;
   margin-right: 7rem;
@@ -376,7 +376,7 @@ ul {
 }
 
 .blog {
-  padding: 80px 0;
+  padding: 80px ;
   text-align: center;
 }
 
@@ -387,7 +387,6 @@ ul {
 }
 
 .blog .section-subtext {
-  max-width: 700px;
   margin: 0 auto 48px;
 }
 
@@ -396,22 +395,12 @@ ul {
   gap: 24px;
   text-align: center;
 }
-
 /* had to add this because the cards kept overflowing on smaller screens */
-.blog-cards {
-  flex-direction: column;
-}
-
-.blog-card {
-  position: relative;
-}
 
 .blog-card img {
   width: 100%;
   height: 280px;
-  object-fit: cover;
   border-radius: 8px;
-  display: block;
 }
 
 .blog-card-text {
@@ -542,12 +531,11 @@ ul {
   cursor: pointer;
 }
 
-/* MOBILE BREAKPOINT */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .hamburger {
     display: flex;
   }
-
+  
   .nav-links {
     display: none;
     position: absolute;
@@ -578,6 +566,7 @@ ul {
 
   .hero-inner {
     flex-direction: column;
+    justify-content: center;
   }
 
   .hero-content {
@@ -585,23 +574,32 @@ ul {
     margin-left: 0;
     text-align: center;
   }
-
-  .hero-image {
-    max-width: 100%;
-  }
+   .hero-content h1{
+    font-size: 32px;
+   }
+.hero-subtext{
+  font-size: 15px;
+}
+ .illustration-wrap{
+padding-left: 20px;
+ }
+.illustration-wrap img{
+width: 90px;
+}
 
   .clients-logos {
     gap: 24px;
   }
 
   .groups-cards {
-    gap: 20px;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
   }
 
   .learn-more {
     gap: 24px;
     text-align: center;
+    padding-bottom:20px ;
   }
 
   .help {
@@ -632,6 +630,11 @@ ul {
   .blog-cards {
     flex-direction: column;
   }
+
+.groups-cards{
+  display: flex;
+  padding: 1px;
+}
 
   .footer-inner {
     flex-direction: column;
